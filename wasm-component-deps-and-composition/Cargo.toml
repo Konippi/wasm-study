@@ -2,7 +2,7 @@
 members = [
     "lib/greet",
     "lib/say",
-    "caller"
+    "caller-with-composed-component"
 ]
 
 [workspace.package]
