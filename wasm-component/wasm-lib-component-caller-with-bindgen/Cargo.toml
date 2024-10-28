@@ -1,5 +1,5 @@
 [package]
-name = "wasm-lib-component-caller"
+name = "wasm-lib-component-caller-with-bindgen"
 version.workspace = true
 edition.workspace = true
 

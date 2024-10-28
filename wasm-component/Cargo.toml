@@ -1,8 +1,8 @@
 [workspace]
 members = [
     "wasm-lib-component",
-    "wasm-lib-component-caller",
-    "wasm-lib-component-caller-with-wasmtime-bindgen"
+    "wasm-lib-component-caller", 
+    "wasm-lib-component-caller-with-bindgen"
 ]
 
 [workspace.package]
@@ -11,4 +11,3 @@ version = "0.1.0"
 edition = "2021"
 
 [workspace.dependencies]
-wit-bindgen-rt = { version = "0.34.0", features = ["bitflags"] }
