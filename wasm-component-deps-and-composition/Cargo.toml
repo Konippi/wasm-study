@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    "lib/greet",
+    "lib/say",
+    "caller"
+]
+
+[workspace.package]
+name = "wasm-component-deps-and-composition"
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+wit-bindgen-rt = { version = "0.34.0", features = ["bitflags"] }

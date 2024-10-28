@@ -1,0 +1,25 @@
+[package]
+name = "greet"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+wit-bindgen-rt = { workspace = true }
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+codegen-units = 1
+opt-level = "s"
+debug = false
+strip = true
+lto = true
+
+[package.metadata.component]
+package = "component:greet"
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target]
+world = "greetable-provider"

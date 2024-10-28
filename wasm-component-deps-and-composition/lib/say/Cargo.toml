@@ -1,0 +1,29 @@
+[package]
+name = "say"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+ferris-says = "0.3.1"
+wit-bindgen-rt = { workspace = true }
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+codegen-units = 1
+opt-level = "s"
+debug = false
+strip = true
+lto = true
+
+[package.metadata.component]
+package = "wasm-study:say"
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target]
+world = "sayable-provider"
+
+[package.metadata.component.target.dependencies]
+"wasm-study:greet" = { path = "../greet/wit" } 

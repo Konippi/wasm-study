@@ -1,0 +1,9 @@
+package wasm-study:say;
+
+interface sayable {
+    say: func() -> string;
+}
+
+world sayable-provider {
+    export sayable;
+}
