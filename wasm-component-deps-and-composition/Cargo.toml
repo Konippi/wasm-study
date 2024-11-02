@@ -2,7 +2,8 @@
 members = [
     "lib/greet",
     "lib/say",
-    "caller-with-composed-component"
+    "caller-with-composed-component",
+    "dynamic-deps-with-native-code"
 ]
 
 [workspace.package]

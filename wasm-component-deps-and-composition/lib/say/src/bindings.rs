@@ -69,7 +69,7 @@ pub mod exports {
     #[allow(dead_code)]
     pub mod wasm_study {
         #[allow(dead_code)]
-        pub mod say {
+        pub mod greet {
             #[allow(dead_code, clippy::all)]
             pub mod sayable {
                 #[used]
@@ -101,18 +101,18 @@ pub mod exports {
                     fn say() -> _rt::String;
                 }
                 #[doc(hidden)]
-                macro_rules! __export_wasm_study_say_sayable_cabi {
+                macro_rules! __export_wasm_study_greet_sayable_cabi {
                     ($ty:ident with_types_in $($path_to_types:tt)*) => {
-                        const _ : () = { #[export_name = "wasm-study:say/sayable#say"]
+                        const _ : () = { #[export_name = "wasm-study:greet/sayable#say"]
                         unsafe extern "C" fn export_say() -> * mut u8 {
                         $($path_to_types)*:: _export_say_cabi::<$ty > () } #[export_name
-                        = "cabi_post_wasm-study:say/sayable#say"] unsafe extern "C" fn
+                        = "cabi_post_wasm-study:greet/sayable#say"] unsafe extern "C" fn
                         _post_return_say(arg0 : * mut u8,) { $($path_to_types)*::
                         __post_return_say::<$ty > (arg0) } };
                     };
                 }
                 #[doc(hidden)]
-                pub(crate) use __export_wasm_study_say_sayable_cabi;
+                pub(crate) use __export_wasm_study_greet_sayable_cabi;
                 #[repr(align(4))]
                 struct _RetArea([::core::mem::MaybeUninit<u8>; 8]);
                 static mut _RET_AREA: _RetArea = _RetArea(
@@ -170,21 +170,21 @@ macro_rules! __export_sayable_provider_impl {
     };
     ($ty:ident with_types_in $($path_to_types_root:tt)*) => {
         $($path_to_types_root)*::
-        exports::wasm_study::say::sayable::__export_wasm_study_say_sayable_cabi!($ty
-        with_types_in $($path_to_types_root)*:: exports::wasm_study::say::sayable);
+        exports::wasm_study::greet::sayable::__export_wasm_study_greet_sayable_cabi!($ty
+        with_types_in $($path_to_types_root)*:: exports::wasm_study::greet::sayable);
     };
 }
 #[doc(inline)]
 pub(crate) use __export_sayable_provider_impl as export;
 #[cfg(target_arch = "wasm32")]
-#[link_section = "component-type:wit-bindgen:0.31.0:wasm-study:say:sayable-provider:encoded world"]
+#[link_section = "component-type:wit-bindgen:0.31.0:wasm-study:greet:sayable-provider:encoded world"]
 #[doc(hidden)]
-pub static __WIT_BINDGEN_COMPONENT_TYPE: [u8; 289] = *b"\
-\0asm\x0d\0\x01\0\0\x19\x16wit-component-encoding\x04\0\x07\x9a\x01\x01A\x02\x01\
+pub static __WIT_BINDGEN_COMPONENT_TYPE: [u8; 293] = *b"\
+\0asm\x0d\0\x01\0\0\x19\x16wit-component-encoding\x04\0\x07\x9e\x01\x01A\x02\x01\
 A\x04\x01B\x04\x01@\0\0s\x04\0\x04name\x01\0\x01@\x01\x04names\0s\x04\0\x05greet\
 \x01\x01\x03\x01\x1awasm-study:greet/greetable\x05\0\x01B\x02\x01@\0\0s\x04\0\x03\
-say\x01\0\x04\x01\x16wasm-study:say/sayable\x05\x01\x04\x01\x1fwasm-study:say/sa\
-yable-provider\x04\0\x0b\x16\x01\0\x10sayable-provider\x03\0\0\0G\x09producers\x01\
+say\x01\0\x04\x01\x18wasm-study:greet/sayable\x05\x01\x04\x01!wasm-study:greet/s\
+ayable-provider\x04\0\x0b\x16\x01\0\x10sayable-provider\x03\0\0\0G\x09producers\x01\
 \x0cprocessed-by\x02\x0dwit-component\x070.216.0\x10wit-bindgen-rust\x060.31.0";
 #[inline(never)]
 #[doc(hidden)]

@@ -18,12 +18,9 @@ strip = true
 lto = true
 
 [package.metadata.component]
-package = "wasm-study:say"
+package = "wasm-study:greet"
 
 [package.metadata.component.dependencies]
 
 [package.metadata.component.target]
 world = "sayable-provider"
-
-[package.metadata.component.target.dependencies]
-"wasm-study:greet" = { path = "../greet/wit" } 

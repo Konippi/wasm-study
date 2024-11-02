@@ -1,7 +1,7 @@
 #[allow(warnings)]
 mod bindings;
 
-use crate::bindings::exports::wasm_study::say::sayable::Guest;
+use crate::bindings::exports::wasm_study::greet::sayable::Guest;
 use crate::bindings::wasm_study::greet::greetable::{greet, name};
 
 struct Component;
