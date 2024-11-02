@@ -13,8 +13,16 @@ This is a simple example for using the dependent Wasm components and composing t
     -o composed-greet.wasm
 ```
 
-2. Run the composed Wasm component
+2. Run the Wasm binary
 
-```bash
-> cargo run -- composed-greet.wasm
-```
+- `caller-with-composed-component`:
+
+    ```bash
+    > cargo run -- composed-greet.wasm
+    ```
+
+- `dynamic-caller-with-native-code`:
+
+    ```bash
+    > cargo run -- ../target/wasm32-unknown-unknown/debug/say.wasm
+    ```
