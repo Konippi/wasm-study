@@ -1,0 +1,10 @@
+[package]
+name = "dynamic-deps-with-native-code-in-wasip1"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow = "1.0.91"
+clap = { version = "4.5.20", features = ["derive"] }
+wasmtime = "26.0.0"
+wasmtime-wasi = "26.0.0"

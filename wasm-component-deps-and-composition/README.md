@@ -26,3 +26,9 @@ This is a simple example for using the dependent Wasm components and composing t
     ```bash
     > cargo run -- ../target/wasm32-unknown-unknown/debug/say.wasm
     ```
+
+- `dynamic-caller-with-native-code-in-wasip1`:
+
+    ```bash
+    > cargo run -- ../target/wasm32-wasip1/debug/say.wasm
+    ```
