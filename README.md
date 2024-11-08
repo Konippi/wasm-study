@@ -7,3 +7,4 @@ This repository contains the source code for studying Wasm.
 - [`grep` Command using Wasm](wasm-grep/README.md)
 - [Wasm Component](wasm-component/README.md)
 - [Wasm Component Dependencies and Composition](wasm-component-deps-and-composition/README.md)
+- [Wasm in Docker](wasm-docker/README.md)
